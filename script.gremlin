@@ -1,0 +1,17 @@
+graph = TinkerFactory.createModern()
+
+g = graph.traversal()
+
+g.V()
+
+g.V(1)
+
+g.V(1).values('name')
+
+g.V(1).outE('knows')
+
+g.V(1).outE('knows').inV().values('name')
+
+g.V(1).out('knows').values('name')
+
+g.V(1).out('knows').has('age', gt(30)).values('name')
